@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                                 pos=cad.indexOf("\"")+1;
                                 if(pos!=-1) {
                                     cad = cad.substring(pos);
-                                    fin=cad.indexOf("\"")-1;
+                                    fin=cad.indexOf("\"");
                                     if(fin!=-1) {
                                         cad = cad.substring(0, fin);
                                         l.add(cad);

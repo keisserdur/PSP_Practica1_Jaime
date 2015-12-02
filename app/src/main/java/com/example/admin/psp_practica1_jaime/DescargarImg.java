@@ -69,13 +69,13 @@ public class DescargarImg extends Activity {
         @Override
         protected void onPreExecute() {
 
-            ruta= Environment.getExternalStorageDirectory() +"/"+imagen+".jpg";
-            uri=Uri.fromFile(new File(ruta));
+            ruta= Environment.getExternalStorageDirectory() +"/"+"img"+".jpg";
             iv= (ImageView) findViewById(R.id.imageView);
         }
         @Override
         protected void onPostExecute(Boolean result) {
             if(result==true)
+                uri=Uri.fromFile(new File(ruta));
                 iv.setImageURI(uri);
         }
         @Override
